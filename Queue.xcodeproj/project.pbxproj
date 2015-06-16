@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38DD4EA21B304D76003BBCEE /* Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DD4EA11B304D76003BBCEE /* Queue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DD4EA81B304D76003BBCEE /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD4E9C1B304D76003BBCEE /* Queue.framework */; };
 		38DD4EAF1B304D76003BBCEE /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD4EAE1B304D76003BBCEE /* QueueTests.swift */; };
+		38DD4EB91B304D94003BBCEE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD4EB81B304D94003BBCEE /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +25,10 @@
 /* Begin PBXFileReference section */
 		38DD4E9C1B304D76003BBCEE /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD4EA01B304D76003BBCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38DD4EA11B304D76003BBCEE /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		38DD4EA71B304D76003BBCEE /* QueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD4EAD1B304D76003BBCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD4EAE1B304D76003BBCEE /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
+		38DD4EB81B304D94003BBCEE /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 		38DD4E9E1B304D76003BBCEE /* Queue */ = {
 			isa = PBXGroup;
 			children = (
-				38DD4EA11B304D76003BBCEE /* Queue.h */,
+				38DD4EB81B304D94003BBCEE /* Queue.swift */,
 				38DD4E9F1B304D76003BBCEE /* Supporting Files */,
 			);
 			path = Queue;
@@ -109,7 +109,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38DD4EA21B304D76003BBCEE /* Queue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DD4EB91B304D94003BBCEE /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +323,7 @@
 		38DD4EB31B304D76003BBCEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -332,12 +333,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		38DD4EB41B304D76003BBCEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
