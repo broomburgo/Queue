@@ -2,7 +2,7 @@
 
 import Foundation
 
-///MARK: - Queue
+//MARK: - Queue
 public struct Queue
 {
   let dispatchQueue: dispatch_queue_t
